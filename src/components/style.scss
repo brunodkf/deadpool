@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span{
+        width: 40px;
+        height: 40px;
+        background-color: brown;
+    }
+
+    a {
+        color: var(--branco);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+.socials{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,18 @@
+.home{
+    background-image: url(./assets/fundo-home.png);
+    background-position: center;
+    background-size: cover;
+
+    &__content{
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        img{
+            width: 50%;
+            margin-bottom: -25%;
+        }
+    }
+}

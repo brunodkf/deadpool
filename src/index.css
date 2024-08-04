@@ -1,0 +1,74 @@
+:root {
+  --fonte: Inter;
+  --vermelho: #ED1B24;
+  --branco: #ededed;
+  --amarelo: #FFDF00;
+  background-color: #242424;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte);
+  height: 100%;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--branco);
+}
+
+h1{
+  font-size: 2.5em;
+  line-height: normal;
+}
+h2{
+  font-size: 1.8em;
+}
+
+p {
+  color: var(--branco);
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+a{
+  text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  padding: 1em 0;
+  margin: 0 auto;
+  user-select: none;
+ 
+}
