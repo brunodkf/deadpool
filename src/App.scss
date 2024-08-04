@@ -44,19 +44,29 @@
 
 .footer{
     display: flex;
-    align-items: baseline;
+    align-items: end;
     justify-content: space-between;
     margin-bottom: 2em;
+
+    &__notTrailer{ //sem o trailer
+        justify-content: end;
+    }
 
     &__trailer{
         width: 300px;
         height: 100px;
         background-color: #3d3c3c;
     }
+   
 
     &__links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
         img{
             max-width: 120px;
+            margin-bottom: .5em;
         }
     }
 }

@@ -2,7 +2,7 @@
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { ImFacebook2 } from "react-icons/im";
 import { FaInstagramSquare } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 
 export const Socials = () => {
@@ -20,7 +20,7 @@ export const Socials = () => {
       </li>
       <li className="socials__item">
         <a href="" className="socials__link">
-          <FaYoutube />
+          <IoLogoYoutube />
         </a>
       </li>
       <li className="socials__item">

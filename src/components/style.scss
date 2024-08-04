@@ -3,10 +3,40 @@
     align-items: center;
     justify-content: space-between;
 
-    span{
+    span {
         width: 40px;
         height: 40px;
         background-color: brown;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 5px;
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 2px;
+            height: 50px;
+            position: absolute;
+            display: block;
+            background-color: var(--branco);
+
+            bottom: -70px;
+        }
+
+        &::before{
+            content: '';
+            width: 2px;
+            height: 50px;
+            position: absolute;
+            display: block;
+            background-color: var(--branco);
+
+            top: -70px;
+        }
     }
 
     a {
@@ -16,7 +46,15 @@
     }
 }
 
-.socials{
+.socials {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+
+    &__item {
+        svg {
+            width: 20px;
+            height: 30px;
+            color: var(--branco);
+        }
+    }
 }
