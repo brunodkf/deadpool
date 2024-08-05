@@ -1,36 +1,32 @@
 import { Outlet } from 'react-router'
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { Socials } from './components/Socials'
 import Navbar from './components/Navbar'
 import Container from './components/Container'
 
-
-import Logo from './../public/logo.png'
-import Marvel from './../public/marvel_logo.png'
+import Logo from '/logo.png'
+import Marvel from '/marvel_logo.png'
 
 import './App.scss'
-import { Socials } from './components/Socials'
+
 
 
 
 
 function App() {
 
-  const [isVisible, setIsVisible] = useState(true);
   const [trailer, setTrailer] = useState('')
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname != '/') {
-      setIsVisible(false);
       setTrailer('footer__notTrailer')
-    }else{
-      setIsVisible(true);
+    } else {
       setTrailer('')
     }
-    console.log('Você está na página:', location.pathname);
   }, [location]);
-
 
   return (
     <div className="App">
@@ -40,12 +36,12 @@ function App() {
           <a className='header__btn' href="#">Ingressos</a>
         </div>
 
-
-
-        <Navbar />
+        <Navbar page={location.pathname}/>
 
         <div className={`footer ${trailer}`}>
-          {isVisible && <div className="footer__trailer"></div>}
+          <div className={`footer__trailer`}>
+            <FaRegCirclePlay />
+          </div>
 
           <div className="footer__links">
             <img src={Marvel} alt="Logo Marvel" />
