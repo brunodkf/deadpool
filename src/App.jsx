@@ -1,45 +1,60 @@
 import { Outlet } from 'react-router'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { Socials } from './components/Socials'
 import Navbar from './components/Navbar'
 import Container from './components/Container'
+import Modal from './components/Modal';
 
 import Logo from '/logo.png'
 import Marvel from '/marvel_logo.png'
 
 import './App.scss'
 
-
-
-
+const apiKey = import.meta.env.VITE_API_KEY;
+const movieURL = import.meta.env.VITE_API; //informações do filme
+const movieVideos = import.meta.env.VITE_API_VIDEOS;
 
 function App() {
 
-  const [trailer, setTrailer] = useState('')
+  const [cardTrailer, setCardTrailer] = useState('') //Controla se o card de trailer aparece ou não na página
   const location = useLocation();
-
   useEffect(() => {
     if (location.pathname != '/') {
-      setTrailer('footer__notTrailer')
+      setCardTrailer('footer__notTrailer')
     } else {
-      setTrailer('')
+      setCardTrailer('')
     }
   }, [location]);
+
+
+  const [trailer, setTrailer] = useState([]) // Controla a chamada da API
+
+  useEffect(() => {
+    fetch(`${movieVideos}${apiKey}`)
+      .then(resposta => resposta.json())
+      .then(dados => setTrailer(dados))
+  }, [])
+
+
+  const [openModal, setOpenModal] = useState(false); //Controla o estado do Modal
+  function closeModal(){
+    setOpenModal(false);
+  }
 
   return (
     <div className="App">
       <Container>
         <div className="header">
           <img className='header__img' src={Logo} alt="Logo Deadpool" />
-          <a className='header__btn' href="#">Ingressos</a>
+          <a className='header__btn' target='_blank' href="https://www.ingresso.com/filme/deadpool-e-wolverine">Ingressos</a>
         </div>
 
-        <Navbar page={location.pathname}/>
+        <Navbar page={location.pathname} />
 
-        <div className={`footer ${trailer}`}>
-          <div className={`footer__trailer`}>
+        <div className={`footer ${cardTrailer}`}>
+          <div className={`footer__trailer`} onClick={() => setOpenModal(true)}>
             <FaRegCirclePlay />
           </div>
 
@@ -49,6 +64,8 @@ function App() {
           </div>
         </div>
       </Container>
+
+      <Modal isOpen={openModal} trailer={trailer} closeModal={closeModal}/>
 
       <Outlet />
     </div>
