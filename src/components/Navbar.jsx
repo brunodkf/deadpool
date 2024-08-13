@@ -1,14 +1,43 @@
 import { Link } from 'react-router-dom';
+import ReactAudioPlayer from 'react-audio-player';
 import { IoMdVolumeHigh } from "react-icons/io";
+import { IoMdVolumeOff } from "react-icons/io";
+
+import Som from './../assets/song.mp3'
 import './style.scss';
+import { useRef, useState, useEffect } from 'react';
 
 
-const Navbar = () => {
+const Navbar = ({isOpen}) => {
+
+    const music = useRef(null);
+
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const mostra = ()=>{
+        console.log('TOCA')
+        setIsPlaying(true)
+        music.current.audioEl.current.play();
+    }
+    const esconde = () =>{
+        console.log('PAUSA')
+        setIsPlaying(false)
+        music.current.audioEl.current.pause();
+    }
+
+
     return (
         <nav className='navbar'>
 
-            <span>
-                <IoMdVolumeHigh />
+            <span onClick={isPlaying ? esconde : mostra}>
+
+                {isPlaying ? <IoMdVolumeHigh /> : <IoMdVolumeOff />}
+
+                <ReactAudioPlayer
+                    ref={music}
+                    src={Som}
+                    style={{ display: 'none' }}
+                />
             </span>
 
             <ul className='navbar__list'>

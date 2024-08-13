@@ -51,7 +51,7 @@ function App() {
           <a className='header__btn' target='_blank' href="https://www.ingresso.com/filme/deadpool-e-wolverine">Ingressos</a>
         </div>
 
-        <Navbar page={location.pathname} />
+        <Navbar page={location.pathname} isOpen={openModal}/>
 
         <div className={`footer ${cardTrailer}`}>
           <div className={`footer__trailer`} onClick={() => setOpenModal(true)}>
