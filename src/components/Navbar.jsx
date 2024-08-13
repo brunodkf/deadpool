@@ -15,15 +15,18 @@ const Navbar = ({isOpen}) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
     const mostra = ()=>{
-        console.log('TOCA')
         setIsPlaying(true)
         music.current.audioEl.current.play();
     }
     const esconde = () =>{
-        console.log('PAUSA')
         setIsPlaying(false)
         music.current.audioEl.current.pause();
     }
+
+    useEffect(()=>{
+        setIsPlaying(false)
+        music.current.audioEl.current.pause();
+    }, [isOpen])
 
 
     return (
