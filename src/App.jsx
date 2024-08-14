@@ -7,18 +7,18 @@ import Navbar from './components/Navbar'
 import Container from './components/Container'
 import Modal from './components/Modal';
 
-import Logo from '/logo.png'
-import Marvel from '/marvel_logo.png'
+import Logo from '/logo.webp'
+import Marvel from '/marvel_logo.webp'
 
 import './App.scss'
 
 const apiKey = import.meta.env.VITE_API_KEY;
-const movieURL = import.meta.env.VITE_API; //informações do filme
+const movieURL = import.meta.env.VITE_API; 
 const movieVideos = import.meta.env.VITE_API_VIDEOS;
 
 function App() {
 
-  const [cardTrailer, setCardTrailer] = useState('') //Controla se o card de trailer aparece ou não na página
+  const [cardTrailer, setCardTrailer] = useState('') 
   const location = useLocation();
   useEffect(() => {
     if (location.pathname != '/') {
@@ -29,7 +29,7 @@ function App() {
   }, [location]);
 
 
-  const [trailer, setTrailer] = useState([]) // Controla a chamada da API
+  const [trailer, setTrailer] = useState([]) 
 
   useEffect(() => {
     fetch(`${movieVideos}${apiKey}`)

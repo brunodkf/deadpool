@@ -1,4 +1,4 @@
-import Hero from './assets/wolvPool.png';
+import Hero from './assets/wolvPool.webp';
 
 import './style.scss'
 export default function Home() {

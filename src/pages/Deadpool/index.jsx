@@ -1,4 +1,4 @@
-import Hero from './assets/hero.png'
+import Hero from './assets/hero.webp'
 import './style.scss';
 
 
