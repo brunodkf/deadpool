@@ -1,6 +1,6 @@
 .page{
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,5 +108,16 @@
             max-width: 120px;
             margin-bottom: .5em;
         }
+    }
+}
+
+
+
+@media screen and (max-width: 500px){
+    .page{
+        height: 100dvh;
+    }
+    .footer{
+        margin-bottom: 0;
     }
 }
