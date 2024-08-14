@@ -35,7 +35,7 @@
 
         &__text {
             background: rgba(0, 0, 0, 0.319);
-            backdrop-filter: blur( 2.5px );
+            backdrop-filter: blur(2.5px);
             -webkit-backdrop-filter: blur(0.5px);
             border-radius: 10px;
             padding: 1em;
@@ -50,14 +50,51 @@
                 letter-spacing: 2px;
             }
 
-            p{
+            p {
                 margin-bottom: 10px;
                 text-shadow:
-                1px 1px 0 #0000008c, 
-                -1px -1px 0 #0000008c, 
-                1px -1px 0 #0000008c, 
-                -1px 1px 0 #0000008c; 
+                    1px 1px 0 #0000008c,
+                    -1px -1px 0 #0000008c,
+                    1px -1px 0 #0000008c,
+                    -1px 1px 0 #0000008c;
             }
+        }
+
+    }
+}
+
+
+@media screen and (width <=500px) {
+    .wolverine {
+        align-items: end;
+
+        &__content {
+            height: 90%;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            &__hero,
+            &__text {
+                width: 100%;
+            }
+
+            &__text{
+                padding: 0;
+                transform: translateX(0px);
+                background: rgba(0, 0, 0, 0);
+            }
+
+            &__hero {
+                height: auto;
+                position: relative;
+                transform: scale(1.5) translateY(-30px);
+
+                img {
+                    transform: translate(0px, 0px);
+                }
+            }
+
+
         }
 
     }

@@ -1,4 +1,5 @@
 import Hero from './assets/logan.webp'
+import HeroMobile from './assets/wolvMobile.webp'
 import './style.scss';
 
 
@@ -6,8 +7,11 @@ export default function Wolverine() {
     return (
         <div className="wolverine page">
             <div className="wolverine__content container">
-            <div className="wolverine__content__hero">
-                    <img src={Hero} alt="Wolverine" />
+                <div className="wolverine__content__hero">
+                    <picture>
+                        <source media="(max-width: 500px )" srcset={HeroMobile} type="image/webp" />
+                        <img src={Hero} alt="Wolverine" />
+                    </picture>
                 </div>
                 <div className="wolverine__content__text">
                     <h1>WOLVERINE</h1>
