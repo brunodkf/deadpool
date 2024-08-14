@@ -20,8 +20,9 @@
 @media screen and (max-width: 500px) {
     .home {
         img {
-            width: 100%;
-            margin-bottom: 0;
+            width: 200%;
+            margin-bottom: 116px;
+            transform: rotate(20deg) translate(-82px, 183px);
         }
     }
 }
