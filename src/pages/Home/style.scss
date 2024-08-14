@@ -1,18 +1,27 @@
-.home{
+.home {
     background-image: url(./assets/fundo-home.webp);
     background-position: center;
     background-size: cover;
 
-    &__content{
+    &__content {
         z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
 
-        img{
+        img {
             width: 50%;
             margin-bottom: -25%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home {
+        img {
+            width: 100%;
+            margin-bottom: 0;
         }
     }
 }
