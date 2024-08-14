@@ -38,8 +38,8 @@
             z-index: 1;
 
             background: rgba(0, 0, 0, 0.219);
-            backdrop-filter: blur( 2.5px );
-            -webkit-backdrop-filter: blur( 0.5px );
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(0.5px);
             padding: 1em;
 
             h1 {
@@ -51,16 +51,47 @@
                 letter-spacing: 2px;
             }
 
-            p{
+            p {
                 text-shadow:
-                1px 1px 0 #0000008c, 
-                -1px -1px 0 #0000008c, 
-                1px -1px 0 #0000008c, 
-                -1px 1px 0 #0000008c; 
+                    1px 1px 0 #0000008c,
+                    -1px -1px 0 #0000008c,
+                    1px -1px 0 #0000008c,
+                    -1px 1px 0 #0000008c;
             }
         }
 
 
     }
 
+}
+
+
+@media screen and (width <=500px) {
+    .deadpool {
+        align-items: end;
+
+        &__content {
+            width: 80%;
+            height: 90%;
+            padding: 0;
+
+            &__text,
+            &__hero {
+                position: relative;
+            }
+
+            &__text{
+                width: 100%;
+                background: rgba(0, 0, 0, 0);
+                
+                p{
+                    width: 80%;
+                }
+            }
+
+            &__hero{
+                transform: scale(1.5) translateY(-30px);
+            }
+        }
+    }
 }

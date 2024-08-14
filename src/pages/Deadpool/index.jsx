@@ -1,4 +1,5 @@
-import Hero from './assets/hero.webp'
+import Hero from './assets/hero.webp';
+import HeroMobile from './assets/deadMobile.webp'
 import './style.scss';
 
 
@@ -6,7 +7,7 @@ export default function Deadpool() {
     return (
         <div className="deadpool page">
             <div className="deadpool__content container">
-            <div className="deadpool__content__text">
+                <div className="deadpool__content__text">
                     <h1>DEADPOOL</h1>
 
                     <p> <b>Wade Wilson</b>, é isso ai, letras iguais...</p>
@@ -17,7 +18,10 @@ export default function Deadpool() {
                     <p>Precisa de mais? Você me conhece já, olha o site, dá uma volta. Tem até musiquinha...</p>
                 </div>
                 <div className="deadpool__content__hero">
-                    <img src={Hero} alt="Deadpool" />
+                    <picture>
+                        <source media="(max-width: 500px )" srcset={HeroMobile} type="image/webp" />
+                        <img src={Hero} alt="Deadpool" />
+                    </picture>
                 </div>
             </div>
         </div>
