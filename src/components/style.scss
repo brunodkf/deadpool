@@ -36,8 +36,9 @@
     }
 
     &__decoration {
-        border-bottom: solid 1px red;
+        border-bottom: solid 2px var(--vermelho);
     }
+
 
     &__list {
         display: flex;
@@ -139,7 +140,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #000000;
+        background-color: var(--preto);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
 

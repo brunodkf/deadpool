@@ -1,19 +1,66 @@
-.deadpool{
-    background-image: url(./assets/fundo-deadpool.png);
+.deadpool {
+    background-image: url(./assets/fundo-deadpool.webp);
     background-position: center;
     background-size: cover;
 
-    &__content{
-        z-index: 2;
+    &__content {
         display: flex;
-        align-items: center;
-        justify-content: center;
         position: relative;
+        width: 70%;
+        height: 60%;
+        z-index: 0;
+        // background-color: blue;
 
-        img{
-            width: 50%;
-            margin-bottom: -25%;
+        // &__hero,
+        // &__text {
+        //     background-color: brown;
+        //     border: solid;
+        // }
+
+        &__hero {
+            width: 100%;
+            left: 0;
+            bottom: -10;
+            position: absolute;
+
+            z-index: 0;
+
+            img {
+                width: 100%;
+            }
         }
-    }
-}
 
+        &__text {
+            width: 70%;
+            right: 0;
+            top: 0;
+            position: absolute;
+            z-index: 1;
+
+            background: rgba(0, 0, 0, 0.219);
+            backdrop-filter: blur( 2.5px );
+            -webkit-backdrop-filter: blur( 0.5px );
+            padding: 1em;
+
+            h1 {
+                font-family: 'Impact';
+                font-size: 5em;
+                color: transparent;
+                -webkit-text-stroke: 1px rgb(255, 255, 255);
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            p{
+                text-shadow:
+                1px 1px 0 #0000008c, 
+                -1px -1px 0 #0000008c, 
+                1px -1px 0 #0000008c, 
+                -1px 1px 0 #0000008c; 
+            }
+        }
+
+
+    }
+
+}
