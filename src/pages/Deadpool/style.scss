@@ -7,7 +7,7 @@
         display: flex;
         position: relative;
         width: 70%;
-        height: 60%;
+        height: 80%;
         z-index: 0;
         // background-color: blue;
 
@@ -20,7 +20,7 @@
         &__hero {
             width: 100%;
             left: 0;
-            bottom: -10;
+            bottom: 0;
             position: absolute;
 
             z-index: 0;
@@ -94,4 +94,56 @@
             }
         }
     }
+}
+
+
+@media screen and (501px <= width <= 768px){
+    .deadpool {
+        align-items: end;
+
+        &__content {
+            width: 80%;
+            height: 90%;
+            padding: 0;
+
+            &__text,
+            &__hero {
+                position: relative;
+            }
+
+            &__text{
+                width: 100%;
+                background: rgba(0, 0, 0, 0);
+                
+                p{
+                    width: 80%;
+                }
+            }
+
+            &__hero{
+                transform: scale(1.5) translateY(126px);
+            }
+        }
+    }
+}
+
+@media screen and (769px <= width <= 900px){
+    .deadpool{
+        &__content{
+            &__text{
+                width: 100%;
+                background: rgba(0, 0, 0, 0);
+                
+                p{
+                    width: 100%;
+                }
+            }
+            &__hero{
+                img {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+
 }

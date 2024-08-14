@@ -1,5 +1,6 @@
 import Hero from './assets/hero.webp';
 import HeroMobile from './assets/deadMobile.webp'
+import HeroTab from './assets/deadpoolTAB.webp'
 import './style.scss';
 
 
@@ -20,6 +21,7 @@ export default function Deadpool() {
                 <div className="deadpool__content__hero">
                     <picture>
                         <source media="(max-width: 500px )" srcset={HeroMobile} type="image/webp" />
+                        <source media="(min-width: 500px ) and (max-width: 768px)" srcset={HeroTab} type="image/webp" />
                         <img src={Hero} alt="Deadpool" />
                     </picture>
                 </div>
