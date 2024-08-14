@@ -120,5 +120,11 @@
     .footer{
         margin-bottom: 0;
         padding-bottom: 4em;
+
+        &__trailer{
+            width: 70px;
+            height: 100px;
+            margin-bottom: .5em;
+        }
     }
 }
