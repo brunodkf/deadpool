@@ -160,3 +160,23 @@
     }
 
 }
+
+
+@media screen and (max-width: 500px) {
+    .navbar {
+
+        a {
+            font-weight: 600;
+            text-shadow:
+            1px 1px 0 #0000008c, 
+            -1px -1px 0 #0000008c, 
+            1px -1px 0 #0000008c, 
+            -1px 1px 0 #0000008c; 
+        }
+        svg{
+            opacity: 1;
+            filter: drop-shadow(0 0 2px black);
+        }
+
+    }
+}
