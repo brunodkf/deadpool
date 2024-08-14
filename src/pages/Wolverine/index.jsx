@@ -9,7 +9,7 @@ export default function Wolverine() {
             <div className="wolverine__content container">
                 <div className="wolverine__content__hero">
                     <picture>
-                        <source media="(max-width: 500px )" srcset={HeroMobile} type="image/webp" />
+                        <source media="(max-width: 768px )" srcset={HeroMobile} type="image/webp" />
                         <img src={Hero} alt="Wolverine" />
                     </picture>
                 </div>
