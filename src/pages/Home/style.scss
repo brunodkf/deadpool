@@ -27,10 +27,20 @@
     }
 }
 
-@media screen and (501px <= width <= 768px){
+@media screen and (501px <= width <= 900px){
     .home {
         img {
             width: 100%;
+            margin-bottom: 116px;
+            transform: rotate(20deg) translate(0px, 185px);
+        }
+    }
+}
+
+@media screen and (901px <= width <= 1024px){
+    .home {
+        img {
+            width: 80%;
             margin-bottom: 116px;
             transform: rotate(20deg) translate(0px, 185px);
         }
