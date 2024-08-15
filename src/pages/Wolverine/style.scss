@@ -123,12 +123,18 @@
                 padding: 0;
                 transform: translateX(0px);
                 background: rgba(0, 0, 0, 0);
+                position: absolute;
+                top: 20px;
+
+                h1{
+                    font-size: 4em;
+                }
             }
 
             &__hero {
                 height: auto;
                 position: relative;
-                transform: scale(1.5) translateY(10px);
+                transform: translateY(20px);
 
                 img {
                     transform: translate(0px, 0px);
@@ -139,5 +145,4 @@
         }
 
     }
-
 }
