@@ -12,6 +12,8 @@ export default function Modal({ isOpen, trailer, closeModal }) {
         setListVideos(trailer.results)
     }, [trailer]);
 
+    console.log(listVideos)
+
     if (isOpen) {
         return (
             <div className="modal">
